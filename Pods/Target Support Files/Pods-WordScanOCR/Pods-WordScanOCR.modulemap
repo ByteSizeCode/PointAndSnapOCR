@@ -1,0 +1,6 @@
+framework module Pods_WordScanOCR {
+  umbrella header "Pods-WordScanOCR-umbrella.h"
+
+  export *
+  module * { export * }
+}

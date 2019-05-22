@@ -48,7 +48,6 @@ extension ViewController {
     
     //Do OCR on image
     performOCR(withImage: image)
-    
   }
 }
 

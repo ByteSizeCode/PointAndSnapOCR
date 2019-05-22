@@ -18,8 +18,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
   
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(true)
-    
-//    navigationController?.pushViewController(LoadingIndicatorViewController(), animated: true)
 
     //Display camera interface
     let vc = UIImagePickerController()

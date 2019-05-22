@@ -19,6 +19,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(true)
     
+//    navigationController?.pushViewController(LoadingIndicatorViewController(), animated: true)
+
     //Display camera interface
     let vc = UIImagePickerController()
     vc.sourceType = .camera
@@ -39,7 +41,7 @@ extension ViewController {
   /* Take image and get its OCR reading. Called after image is taken. */
   func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
     picker.dismiss(animated: true)
-    
+    print("aaa")
     //Get image taken
     guard let image = info[.editedImage] as? UIImage else {
       print("No image found") //Terminate if no image found
@@ -59,26 +61,26 @@ extension ViewController {
   }
 }
 
-
 /* Helper functions */
 extension ViewController {
   /* Perform OCR on image */
   func performOCR(withImage image:UIImage) {
-    //Create tesseract G8Tesseract object
-    if let tesseract = G8Tesseract(language: "eng") {
-      tesseract.engineMode = .tesseractCubeCombined
-      tesseract.pageSegmentationMode = .auto
-      
-      tesseract.image = image
-      tesseract.recognize()
-      
-      //Save recognized text
-      let OCROutput = tesseract.recognizedText as! String
-      UserDefaults.standard.set(OCROutput, forKey: "Text")
+
+    //Perform OCR in the background in a dispatch queue so the app does not appear to freeze up
+    DispatchQueue.main.async {
+      //Create tesseract G8Tesseract object
+      if let tesseract = G8Tesseract(language: "eng") {
+        tesseract.engineMode = .tesseractCubeCombined
+        tesseract.pageSegmentationMode = .auto
+        
+        tesseract.image = image
+        tesseract.recognize()
+        
+        //Save recognized text
+        let OCROutput = tesseract.recognizedText as! String
+        UserDefaults.standard.set(OCROutput, forKey: "Text")
+        
+      }
     }
-  }
-  /* Navigate to ScrollViewController to display OCR output to user */
-  func showOCRResultToUser() {
-    navigationController?.pushViewController(OCRResultViewController(), animated: true)
   }
 }

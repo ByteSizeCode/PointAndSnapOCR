@@ -68,12 +68,20 @@
 			children = (
 				0432746E223AF8FD00E65B50 /* AppDelegate.swift */,
 				6A7FE4042294997400C6010F /* Controllers */,
+				6A0133FE229507CC00ADB72A /* Views */,
 				04327477223AF8FF00E65B50 /* LaunchScreen.storyboard */,
 				04327472223AF8FD00E65B50 /* Main.storyboard */,
 				04327475223AF8FF00E65B50 /* Assets.xcassets */,
 				0432747A223AF8FF00E65B50 /* Info.plist */,
 			);
 			path = WordScanOCR;
+			sourceTree = "<group>";
+		};
+		6A0133FE229507CC00ADB72A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		6A7FE4042294997400C6010F /* Controllers */ = {
@@ -120,7 +128,7 @@
 			dependencies = (
 			);
 			name = WordScanOCR;
-			productName = "WordScanOCR";
+			productName = WordScanOCR;
 			productReference = 0432746B223AF8FD00E65B50 /* WordScanOCR.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -132,7 +140,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
-				ORGANIZATIONNAME = "IsaacRaval";
+				ORGANIZATIONNAME = IsaacRaval;
 				TargetAttributes = {
 					0432746A223AF8FD00E65B50 = {
 						CreatedOnToolsVersion = 10.1;

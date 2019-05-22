@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MW2-Sz-ZJU">
-    <device id="retina11_6" orientation="portrait">
+    <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -13,16 +13,28 @@
         <!--View Controller-->
         <scene sceneID="J7U-iC-mAa">
             <objects>
-                <viewController id="bT2-HK-FHi" customClass="ViewController" customModule="Love_In_A_Snap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bT2-HK-FHi" customClass="ViewController" customModule="WordScanOCR" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IvW-pS-mca"/>
                         <viewControllerLayoutGuide type="bottom" id="BPV-7C-QJI"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QP8-tQ-YUJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qGG-sY-8vp">
+                                <rect key="frame" x="169.5" y="437.5" width="75" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="qGG-sY-8vp" firstAttribute="centerY" secondItem="QP8-tQ-YUJ" secondAttribute="centerY" id="YRA-gK-0G4"/>
+                            <constraint firstItem="qGG-sY-8vp" firstAttribute="centerX" secondItem="QP8-tQ-YUJ" secondAttribute="centerX" id="oCI-WX-eR9"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gar-ts-8A6"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="78n-R5-oyx" appends="YES" id="hQm-oj-v1N"/>
@@ -42,20 +54,25 @@
         <!--Result View Controller-->
         <scene sceneID="o2j-Jx-SVm">
             <objects>
-                <viewController storyboardIdentifier="OCRResVC" id="B5u-BO-uBY" customClass="OCRResultViewController" customModule="Love_In_A_Snap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OCRResVC" id="B5u-BO-uBY" customClass="OCRResultViewController" customModule="WordScanOCR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cas-tY-qpx">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Loading..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8U4-eb-WXH">
-                                <rect key="frame" x="0.0" y="35" width="375" height="632"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Loading..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8U4-eb-WXH">
+                                <rect key="frame" x="0.0" y="35" width="414" height="861"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" smartQuotesType="no"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8U4-eb-WXH" firstAttribute="trailing" secondItem="GFT-Bu-yQy" secondAttribute="trailing" id="1lr-as-o6A"/>
+                            <constraint firstAttribute="bottom" secondItem="8U4-eb-WXH" secondAttribute="bottom" id="2yG-Qk-ZuM"/>
+                            <constraint firstItem="8U4-eb-WXH" firstAttribute="top" secondItem="cas-tY-qpx" secondAttribute="top" constant="35" id="S6Q-4o-MeT"/>
+                            <constraint firstItem="8U4-eb-WXH" firstAttribute="leading" secondItem="GFT-Bu-yQy" secondAttribute="leading" id="vmd-Wh-gwT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="GFT-Bu-yQy"/>
                     </view>
                     <connections>
@@ -64,7 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4mD-On-zYf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1877.5999999999999" y="251.42428785607197"/>
+            <point key="canvasLocation" x="1876.8115942028987" y="251.11607142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CLh-wn-mLo">
@@ -72,7 +89,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MW2-Sz-ZJU" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sVj-kT-f0h">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

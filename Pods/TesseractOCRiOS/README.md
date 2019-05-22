@@ -1,4 +1,5 @@
-# Tesseract OCR iOS
+# Tesseract OCR iOS by gali8:
+## Tesseract OCR iOS
 
 [![Build Status](https://travis-ci.org/gali8/Tesseract-OCR-iOS.svg?branch=master)](https://travis-ci.org/gali8/Tesseract-OCR-iOS) [![Coverage Status](https://img.shields.io/coveralls/gali8/Tesseract-OCR-iOS.svg)](https://coveralls.io/r/gali8/Tesseract-OCR-iOS) [![](https://img.shields.io/cocoapods/v/TesseractOCRiOS.svg)](http://cocoapods.org/?q=tesseractocrios) [![](https://img.shields.io/cocoapods/p/TesseractOCRiOS.svg)](http://cocoapods.org/?q=tesseractocrios)  [![](https://img.shields.io/cocoapods/l/TesseractOCRiOS.svg)](https://github.com/gali8/Tesseract-OCR-iOS/blob/master/LICENSE.md)
 
@@ -55,17 +56,6 @@ license (see LICENSE.md).
 Tesseract, maintained by Google (http://code.google.com/p/tesseract-ocr/), is
 distributed under the Apache 2.0 license (see
 http://www.apache.org/licenses/LICENSE-2.0).
-
-
-Buy me a beer
-=================
-#### If you like my work, please buy me a beer (tap the beer):
-<p align="left">
-<a href="http://www.g8production.com/Beer#_=_" alt="If you like my work, please buy me a beer ">
-<img style="-webkit-user-select: none;" 
-src="http://68.media.tumblr.com/3243ca9030c3fa14ca3042344ae3d510/tumblr_inline_ng26w7z8SG1qmlajm.png">
-</a>
-</p>
 
 ## Contributors
 

@@ -14,7 +14,6 @@ import GPUImage
 class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
   
   //Properties
-  var OCROutput = ""
   var numTimesViewAppeared = 0
   
   override func viewDidAppear(_ animated: Bool) {
@@ -49,6 +48,7 @@ extension ViewController {
     
     //Do OCR on image
     performOCR(withImage: image)
+    
   }
 }
 
@@ -73,7 +73,8 @@ extension ViewController {
       tesseract.recognize()
       
       //Save recognized text
-      OCROutput = tesseract.recognizedText as! String
+      let OCROutput = tesseract.recognizedText as! String
+      UserDefaults.standard.set(OCROutput, forKey: "Text")
     }
   }
   /* Navigate to ScrollViewController to display OCR output to user */

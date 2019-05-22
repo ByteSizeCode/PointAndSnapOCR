@@ -12,13 +12,11 @@ class OCRResultViewController: UIViewController {
     
     @IBOutlet weak var textView: UITextView!
     
-    //Singleton for access to ViewController's properties
-    let mainVC = ViewController()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         //Set Text View contents
-        textView?.text = mainVC.OCROutput
+        let txt = UserDefaults.standard.string(forKey: "Text") ?? "Error"
+        textView?.text = txt
     }
 }
